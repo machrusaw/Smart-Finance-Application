@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pemberkel9.smartfinance">
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_sf"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_sf_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MenuActivity"
+            android:theme="@style/AppTheme.NoStatusBar"
+            android:exported="true" />
+        <activity
+            android:name=".activity.BarubukaActivity"
+            android:theme="@style/AppTheme.NoStatusBar" />
+        <activity
+            android:name=".activity.TambahKategoriActivity"
+            android:theme="@style/AppTheme.NoStatusBar" />
+        <activity
+            android:name=".activity.TransaksiSuksesActivity"
+            android:theme="@style/AppTheme.NoStatusBar" />
+        <activity
+            android:name=".activity.LaporanActivity"
+            android:theme="@style/AppTheme.NoStatusBar" />
+        <activity
+            android:name=".activity.TransaksiActivity"
+            android:theme="@style/AppTheme.NoStatusBar" />
+        <activity
+            android:name=".activity.KategoriActivity"
+            android:theme="@style/AppTheme.NoStatusBar" />
+        <activity
+            android:name=".activity.DaftarSuksesActivity"
+            android:theme="@style/AppTheme.NoStatusBar" />
+        <activity
+            android:name=".activity.SignInActivity"
+            android:theme="@style/AppTheme.NoStatusBar" />
+        <activity
+            android:name=".activity.DaftarActivity"
+            android:theme="@style/AppTheme.NoStatusBar" />
+        <activity
+            android:name=".activity.PembukaActivity"
+            android:theme="@style/AppTheme.NoStatusBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:theme="@style/AppTheme.StatusBarCustom" />
+    </application>
+
+</manifest>

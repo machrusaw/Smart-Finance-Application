@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_menu_transaksi"
+    tools:context=".activity.TransaksiActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#0077FF">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_kembali">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tvTitle1"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:text="Transaksi"
+                android:textColor="@color/white"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="25sp">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraint">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/tvTitleSuccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="Masukkan Uang Disini"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="Autofill,HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Monday 12 June 2023 16:15"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvTitleSuccess"
+                app:layout_constraintStart_toStartOf="@+id/tvTitleSuccess"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleSuccess"
+                tools:ignore="HardcodedText" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="554dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="30dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="30dp">
+
+                    <TextView
+                        android:id="@+id/tvText01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:text="Type"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText,MissingConstraints" />
+
+                    <Spinner
+                        android:id="@+id/tvText02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="5dp"
+                        android:spinnerMode="dropdown"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/tvText01"
+                        tools:ignore="MissingConstraints" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/color_grey"
+                        app:layout_constraintTop_toBottomOf="@id/tvText02" />
+
+                    <TextView
+                        android:id="@+id/tvText05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Kategori"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/view2"
+                        tools:ignore="HardcodedText,MissingConstraints" />
+
+                    <Spinner
+                        android:id="@+id/tvText06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="5dp"
+                        android:spinnerMode="dropdown"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/tvText05"
+                        tools:ignore="MissingConstraints" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/color_grey"
+                        app:layout_constraintTop_toBottomOf="@id/tvText06" />
+
+                    <TextView
+                        android:id="@+id/tvText08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Keterangan"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/view3"
+                        tools:ignore="HardcodedText,MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/tvText09"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="top"
+                        android:hint="Masukkan Keterangan"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/tvText08"
+                        app:layout_constraintTop_toBottomOf="@id/tvText08"
+                        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnSendTrans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#FCBB3C"
+        android:layout_marginBottom="30dp"
+        android:text="Simpan"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_rounded_button"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

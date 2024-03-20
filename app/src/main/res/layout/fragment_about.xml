@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="4dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_sf_round"
+        android:transitionName="logoTransition" />
+
+    <TextView
+        android:id="@+id/text_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smart Finance"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/text_app_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smart Finance adalah aplikasi yang membantu Anda dalam menghitung dan melacak uang masuk dan keluar. Dengan fitur yang intuitif dan mudah digunakan, Anda dapat mengelola keuangan pribadi atau bisnis dengan lebih efektif."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/button_contact_us"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:text="Hubungi Kami"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="24dp" />
+
+</LinearLayout>

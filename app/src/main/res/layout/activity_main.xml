@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_menuutama"
+    tools:context=".activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="461dp"
+        android:layout_height="908dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/tvDetailDesc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="Menu Management"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView2"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            tools:ignore="HardcodedText" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="164dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="28dp"
+            app:layout_constraintEnd_toEndOf="@+id/relaMain"
+            app:layout_constraintTop_toBottomOf="@+id/tvSaldoNow">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/pengeluaran"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_masuk" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pengeluaran"
+                        android:textColor="@color/color_grey"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvSumOutcome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp.450.000.000"
+                        android:textColor="@color/color_grey"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="164dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="28dp"
+            app:layout_constraintStart_toStartOf="@+id/relaMain"
+            app:layout_constraintTop_toBottomOf="@+id/tvSaldoNow"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/pemasukan"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_masuk1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pemasukan"
+                        android:textColor="@color/color_grey"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvSumIncome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp.450.000.000"
+                        android:textColor="@color/color_grey"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+            android:id="@+id/relaMain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvTitleSuccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp ..."
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ivAvatar"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="15dp">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/profil"
+                    android:scaleType="fitXY"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvSaldoNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="8dp"
+            android:text="Saldo Tersedia Saat ini"
+            android:textColor="#91919F"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/relaMain"
+            tools:ignore="HardcodedText" />
+
+
+        <TextView
+            android:id="@+id/tvDetailDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Selengkapnya"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="7dp"
+            android:src="@drawable/next"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDetailDesc"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailDesc"
+            app:layout_constraintTop_toTopOf="@+id/tvDetailDesc" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/llWallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginEnd="25dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivTrans"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kategori_keuangan" />
+
+            <TextView
+                android:id="@+id/recTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/ivTrans"
+
+                android:text="Kategori Keuangan"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/recDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recTitle"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="12dp"
+                android:layout_toEndOf="@id/ivTrans"
+
+                android:maxLines="1"
+                android:text="Tambah income dan deskripsi sesuai kategori"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/llTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="25dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llWallet">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivWallet"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/transaksi_keuangan" />
+
+            <TextView
+                android:id="@+id/recTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/ivWallet"
+                android:text="Transaksi Keuangan "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/recDesc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recTitle1"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="12dp"
+                android:layout_toEndOf="@id/ivWallet"
+                android:maxLines="1"
+                android:text="Value, detail deskripsi, income include"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/llReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="25dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llTransaction">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivReport"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/laporan_keuangan" />
+
+            <TextView
+                android:id="@+id/recTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/ivReport"
+                android:text="Laporan Keuangan"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/recDesc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recTitle2"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="12dp"
+                android:layout_toEndOf="@id/ivReport"
+                android:maxLines="1"
+                android:text="Income pengeluaran / pemasukan"
+                android:textSize="11sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

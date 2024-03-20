@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tambahkateg"
+    tools:context=".activity.TambahKategoriActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/ic_kembali">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="229dp"
+            android:layout_height="70dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:text="Tambah Data Kategori Keuangan"
+            android:textColor="@color/white"
+            android:textSize="25sp">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="244dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="52dp"
+        android:textStyle="bold"
+        android:text="Buat kategori dengan baik!"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/button_state_bg"
+        android:hint="Nama Kategori"
+        android:paddingStart="35dp"
+        android:textColorHint="#91919F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields" />
+
+    <EditText
+        android:id="@+id/etDesc"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/button_state_bg"
+        android:hint="Deskripsi"
+        android:inputType="textMultiLine"
+        android:paddingStart="35dp"
+        android:textColorHint="#91919F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTitle"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/etSaldo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/button_state_bg"
+        android:hint="Jumlah Uang"
+        android:inputType="number"
+        android:paddingStart="35dp"
+        android:textColorHint="#91919F"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDesc"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+    <Button
+        android:id="@+id/btnCreate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#FCBB3C"
+        android:layout_marginBottom="40dp"
+        android:text="Lanjutkan"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_rounded_button"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

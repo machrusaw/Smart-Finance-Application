@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="authViewModel"
+            type="pemberkel9.smartfinance.viewmodel.AutentikasiViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.DaftarActivity">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_kembali_hitam"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.063"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.063" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/etFullName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.464" />
+
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/bg_rounded_button"
+            android:backgroundTint="#F1F1FA"
+            android:digits="abcdefghijklmnopqrstuvwxyz"
+            android:hint="Nama Lengkap"
+            android:paddingStart="35dp"
+            android:text="@={authViewModel.fullname}"
+            android:textColorHint="#91919F"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields,VisualLintTextFieldSize" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="24dp"
+            android:textColorHint="#91919F"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/bg_rounded_button"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            android:backgroundTint="#F1F1FA"
+            android:hint="Alamat Email"
+            android:text="@={authViewModel.email}"
+            android:paddingStart="35dp"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry,VisualLintTextFieldSize" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etPasswordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/etEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Kata Sandi"
+                android:paddingStart="35dp"
+                android:text="@={authViewModel.password}"
+                android:textSize="16sp"
+                android:textColorHint="#91919F"
+                android:backgroundTint="#F1F1FA"
+                android:background="@drawable/bg_rounded_button"
+                android:inputType="textPassword"
+                tools:ignore="HardcodedText,RtlSymmetry,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/lnTnc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintTop_toBottomOf="@id/etPasswordLayout"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cbTNC"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_checkbox"
+                android:button="@null"
+                tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/tvTnC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:text="Dengan ini kami mensetujui atas syarat dan ketentuan yang ada "
+                android:textColor="#91919F"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAlreadyAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="center_horizontal|center"
+            android:text="Sudah punya akun? - Masuk"
+            android:textColor="#7F3DFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lnTnc"
+            app:layout_constraintVertical_bias="0.039"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnCreateAccount"
+            android:layout_width="343dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/bg_rounded_button"
+            android:backgroundTint="#FCBB3C"
+            android:text="Buat Akun"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.38"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lnTnc"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="HardcodedText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

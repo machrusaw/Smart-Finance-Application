@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F5F5F5"
+    android:layout_height="match_parent"
+    tools:context=".activity.DaftarSuksesActivity">
+
+
+
+    <TextView
+        android:id="@+id/tvTitleSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:text="Berhasil Masuk Akun"
+        android:textColor="#212325"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvDescRegister"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="30dp"
+        android:justificationMode="inter_word"
+        android:text="Terimakasih sudah berhasil masuk, gunakan aplikasi dengan bijak dan manfaatkan fitur yang tersedia."
+        android:textAlignment="textStart"
+        android:textColor="#292B2D"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleSuccess"
+        tools:ignore="HardcodedText" />
+
+
+    <ImageView
+        android:id="@+id/ivThumbsUp"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+
+        android:src="@drawable/centang1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.569"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/btnToMain"
+        android:layout_width="343dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/bg_rounded_button"
+        android:backgroundTint="#FCBB3C"
+        android:text="Lanjutkan"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
